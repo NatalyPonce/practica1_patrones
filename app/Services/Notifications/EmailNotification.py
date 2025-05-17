@@ -1,5 +1,6 @@
-from AbstractNotification import AbstractNotification
-class EmailNotification(AbstractNotification):
+from AbstractNotification import abstract_notification
+
+class EmailNotification(abstract_notification):
     def __init__(self, email, name):
         self.email = email
         super().setReceiver(name)
