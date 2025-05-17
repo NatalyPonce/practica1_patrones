@@ -1,8 +1,8 @@
 from AbstractNotification import AbstractNotification
 class EmailNotification(AbstractNotification):
-    def __init__(self, recipient_email, subject, message):
-
-
-    def send(self):
-        # Logic to send email notification
-        print(f"Sending email to {self.recipient_email} with subject '{self.subject}' and message '{self.message}'")
+    def __init__(self, email, name):
+        self.email = email
+        super().setReceiver(name)
+        
+    def notificar(self):
+        print(f"Sent to {self.name} email to {self.email}")
